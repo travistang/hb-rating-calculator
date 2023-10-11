@@ -1,6 +1,8 @@
 name: Build project
 run-name: ${{ github.actor }} is building the app...
 on: [push]
+permissions:
+  contents: write
 jobs:
   build:
     runs-on: ubuntu-latest
