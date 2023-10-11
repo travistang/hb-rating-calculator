@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.45e09759.css",
-    "main.js": "/static/js/main.fb2bd29f.js",
-    "static/js/787.4b0a14ab.chunk.js": "/static/js/787.4b0a14ab.chunk.js",
-    "service-worker.js": "/service-worker.js",
-    "index.html": "/index.html",
-    "main.45e09759.css.map": "/static/css/main.45e09759.css.map",
-    "main.fb2bd29f.js.map": "/static/js/main.fb2bd29f.js.map",
-    "787.4b0a14ab.chunk.js.map": "/static/js/787.4b0a14ab.chunk.js.map"
+    "main.css": "/hb-rating-calculator/static/css/main.45e09759.css",
+    "main.js": "/hb-rating-calculator/static/js/main.c356c701.js",
+    "static/js/787.4b0a14ab.chunk.js": "/hb-rating-calculator/static/js/787.4b0a14ab.chunk.js",
+    "service-worker.js": "/hb-rating-calculator/service-worker.js",
+    "index.html": "/hb-rating-calculator/index.html",
+    "main.45e09759.css.map": "/hb-rating-calculator/static/css/main.45e09759.css.map",
+    "main.c356c701.js.map": "/hb-rating-calculator/static/js/main.c356c701.js.map",
+    "787.4b0a14ab.chunk.js.map": "/hb-rating-calculator/static/js/787.4b0a14ab.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.45e09759.css",
-    "static/js/main.fb2bd29f.js"
+    "static/js/main.c356c701.js"
   ]
 }
