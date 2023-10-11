@@ -4,21 +4,19 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:
+      failed: ${{ steps.build.outputs.exit_code }}
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
-      - name: Get branch name
-        id: branch-name
-        uses: tj-actions/branch-names@v7
       - name: Build
         id: build
         run: |
           npm ci 
           npm run build
-          echo ::set-output name=exit_code::$?
       - name: Deploy to github pages
+        if: github.ref == 'refs/heads/main'
         id: deploy
-        if: steps.build.outputs.exit_code == 0 && steps.branch-name.outputs.is_default == 'true'
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: build
