@@ -19,4 +19,6 @@ jobs:
       - name: Deploy to github pages
         id: deploy
         if: steps.build.outputs.exit_code == 0 && steps.branch-name.outputs.is_default == 'true'
-        run: npm run deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: build
