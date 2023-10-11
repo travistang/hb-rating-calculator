@@ -2,11 +2,21 @@ name: Build project
 run-name: ${{ github.actor }} is building the app...
 on: [push]
 jobs:
-  Build:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
-      - run: |
+      - name: Get branch name
+        id: branch-name
+        uses: tj-actions/branch-names@v7
+      - name: Build
+        id: build
+        run: |
           npm ci 
           npm run build
+          echo ::set-output name=exit_code::$?
+      - name: Deploy to github pages
+        id: deploy
+        if: steps.build.outputs.exit_code == 0 && steps.branch-name.outputs.is_default == 'true'
+        run: npm run deploy
