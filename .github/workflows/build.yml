@@ -1,0 +1,10 @@
+name: Build project
+run-name: ${{ github.actor }} is building the app...
+on: [push]
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          npm ci 
+          npm run build
